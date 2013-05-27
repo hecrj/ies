@@ -20,9 +20,7 @@ abstract public class Assignatura
         if(al.teEstudisSuperiors() && plaEstudis.esTecnic())
             throw new AssignaturaPlaTecnic();
         
-        Matricula m = new Matricula(q, this, data);
-        
-        al.afegirMatricula(m);
+        al.matricular(q, this, data);
         alumnes.add(al);
     }
     

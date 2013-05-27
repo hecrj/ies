@@ -26,9 +26,9 @@ public class TxMatricular
             throw new ExisteixMatricula();
         
         Quadrimestre q = dades.obtenirQuadrimestre(numQuad);
-        Assignatura as = dades.obtenirAssignatura(codiAss);
         Alumne al = dades.obtenirAlumne(dni);
+        Assignatura as = dades.obtenirAssignatura(codiAss);
         
-        al.matricular(q, as, data);
+        as.matricular(al, q, data);
     }
 }

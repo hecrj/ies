@@ -24,7 +24,8 @@ public class Alumne
         if(maximMatriculesAssignaturaAssolit(as))
             throw new MaximMatriculesAssignaturaAssolit();
         
-        as.matricular(this, q, data);
+        Matricula m = new Matricula(q, as, data);
+        matricules.add(m);
     }
     
     private boolean maximCreditsAssolit(Quadrimestre q, Assignatura as)
@@ -52,10 +53,5 @@ public class Alumne
     public boolean teEstudisSuperiors()
     {
         return estudis == TipusTitol.SUPERIOR;
-    }
-    
-    public void afegirMatricula(Matricula m)
-    {
-        matricules.add(m);
     }
 }
