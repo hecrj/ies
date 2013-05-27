@@ -13,7 +13,7 @@ abstract public class Assignatura
     private int codi;
     private int numCredits;
     private PlaEstudis plaEstudis;
-    private List<Matricula> matricules;
+    private List<Alumne> alumnes;
     
     public void matricular(Alumne al, Quadrimestre q, Date data)
     {
@@ -23,6 +23,7 @@ abstract public class Assignatura
         Matricula m = new Matricula(q, this, data);
         
         al.afegirMatricula(m);
+        alumnes.add(al);
     }
     
     public int getCredits()
