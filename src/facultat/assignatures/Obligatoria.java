@@ -20,7 +20,7 @@ public class Obligatoria extends Assignatura
     public void matricular(Alumne al, Quadrimestre q, Date data)
     {
         if(al.teEstudisSuperiors() && teProfessorTecnic())
-                throw new ProfessorPocQualificat();
+            throw new ProfessorPocQualificat();
         
         super.matricular(al, q, data);
     }
