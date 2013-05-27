@@ -25,7 +25,8 @@ public class Obligatoria extends Assignatura
         super.matricular(al, q, data);
     }
     
-    private boolean teProfessorTecnic() {
+    private boolean teProfessorTecnic()
+    {
         for(Professor p : professors)
             if(p.esTecnic())
                 return true;

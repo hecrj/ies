@@ -11,7 +11,8 @@ import java.util.Date;
  *
  * @author hector
  */
-public class TxMatricular {
+public class TxMatricular
+{
     private DataController dades;
     
     private String dni;

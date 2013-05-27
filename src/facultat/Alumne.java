@@ -9,7 +9,8 @@ import java.util.List;
  *
  * @author hector
  */
-public class Alumne {
+public class Alumne
+{
     private String dni;
     private TipusTitol estudis;
     
@@ -37,7 +38,8 @@ public class Alumne {
         return totalCredits > 40;
     }
     
-    private boolean maximMatriculesAssignaturaAssolit(Assignatura as) {
+    private boolean maximMatriculesAssignaturaAssolit(Assignatura as)
+    {
         int totalMatricules = 0;
         
         for(Matricula mat : matricules)
@@ -47,11 +49,13 @@ public class Alumne {
         return totalMatricules >= 6;
     }
     
-    public boolean teEstudisSuperiors() {
+    public boolean teEstudisSuperiors()
+    {
         return estudis == TipusTitol.SUPERIOR;
     }
     
-    public void afegirMatricula(Matricula m) {
+    public void afegirMatricula(Matricula m)
+    {
         matricules.add(m);
     }
 }

@@ -4,6 +4,7 @@ package facultat;
  *
  * @author hector
  */
-public class Quadrimestre {
+public class Quadrimestre
+{
     private int numero;
 }

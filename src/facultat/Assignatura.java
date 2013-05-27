@@ -8,7 +8,8 @@ import java.util.List;
  *
  * @author hector
  */
-abstract public class Assignatura {
+abstract public class Assignatura
+{
     private int codi;
     private int numCredits;
     private PlaEstudis plaEstudis;
@@ -24,8 +25,8 @@ abstract public class Assignatura {
         al.afegirMatricula(m);
     }
     
-    public int getCredits() {
+    public int getCredits()
+    {
         return numCredits;
     }
-    
 }

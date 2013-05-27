@@ -15,7 +15,8 @@ public class Optativa extends Assignatura
     private int dificultat;
     
     @Override
-    public void matricular(Alumne al, Quadrimestre q, Date data) {
+    public void matricular(Alumne al, Quadrimestre q, Date data)
+    {
         if(al.teEstudisSuperiors() && teDificultatBaixa())
             throw new AssignaturaOptativaDificultatBaixa();
         
