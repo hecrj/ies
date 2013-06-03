@@ -35,7 +35,7 @@ public class Inscripcio
         if(esdeveniment.esPle())
             throw new HiHaOverbooking();
         
-        estat.confirmarAssistencia(acompanyada);
+        estat.confirmarAssistencia(this, acompanyada);
         
         esdeveniment.incrementarConfirmats();
     }

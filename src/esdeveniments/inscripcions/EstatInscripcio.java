@@ -9,7 +9,7 @@ import esdeveniments.excepcions.InscripcioNoPrevista;
  */
 abstract public class EstatInscripcio
 {
-    protected Inscripcio inscripcio;
+    private Inscripcio inscripcio;
     
     abstract public float getPuntuacio();
     
@@ -23,7 +23,7 @@ abstract public class EstatInscripcio
         return false;
     }
     
-    public void confirmarAssistencia(boolean acompanyada) throws InscripcioNoPrevista
+    public void confirmarAssistencia(Inscripcio inscripcio, boolean acompanyada) throws InscripcioNoPrevista
     {
         throw new InscripcioNoPrevista();
     }

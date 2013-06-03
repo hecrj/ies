@@ -23,7 +23,7 @@ public class Prevista extends EstatInscripcio
     }
     
     @Override
-    public void confirmarAssistencia(boolean acompanyada)
+    public void confirmarAssistencia(Inscripcio inscripcio, boolean acompanyada)
     {
         Confirmada confirmada = new Confirmada(inscripcio, acompanyada);
         inscripcio.modificarEstat(confirmada);
