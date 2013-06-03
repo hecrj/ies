@@ -2,7 +2,8 @@ package academia;
 
 import academia.excepcions.CursPle;
 import academia.excepcions.InscripcioNoOient;
-import academia.excepcions.MassaOficials;
+import academia.excepcions.MassaOficialsCurs;
+import academia.excepcions.MassaOficialsProjecte;
 import academia.excepcions.OficialNoEnginyer;
 import academia.excepcions.OficialOient;
 import academia.excepcions.PocsOients;
@@ -23,7 +24,8 @@ public class Inscripcio
     private EstatInscripcio estat;
     
     public void ferOficial(Projecte projecte)
-            throws CursPle, OficialOient, OficialNoEnginyer, InscripcioNoOient, PocsOients, MassaOficials
+            throws CursPle, OficialOient, OficialNoEnginyer, InscripcioNoOient, PocsOients, MassaOficialsCurs,
+            MassaOficialsProjecte
     {
         if(!persona.estaQualificada(projecte))
             throw new OficialNoEnginyer();

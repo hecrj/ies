@@ -5,7 +5,8 @@ import academia.Projecte;
 import academia.data.DataController;
 import academia.excepcions.CursPle;
 import academia.excepcions.InscripcioNoOient;
-import academia.excepcions.MassaOficials;
+import academia.excepcions.MassaOficialsCurs;
+import academia.excepcions.MassaOficialsProjecte;
 import academia.excepcions.NoExisteixInscripcio;
 import academia.excepcions.NoExisteixProjecte;
 import academia.excepcions.OficialNoEnginyer;
@@ -26,7 +27,7 @@ public class TxFerOficial
     
     public void executar()
             throws NoExisteixInscripcio, NoExisteixProjecte, CursPle, OficialOient, OficialNoEnginyer,
-            InscripcioNoOient, PocsOients, MassaOficials
+            InscripcioNoOient, PocsOients, MassaOficialsCurs, MassaOficialsProjecte
     {
         Inscripcio inscripcio = dades.getInscripcio(dniP, nomCurs);
         Projecte projecte = dades.getProjecte(codiProj);

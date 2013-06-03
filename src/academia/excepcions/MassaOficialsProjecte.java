@@ -4,7 +4,7 @@ package academia.excepcions;
  *
  * @author hector
  */
-public class MassaOficials extends Exception
+public class MassaOficialsProjecte extends Exception
 {
     
 }

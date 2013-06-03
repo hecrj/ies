@@ -4,7 +4,8 @@ import academia.Inscripcio;
 import academia.Persona;
 import academia.Projecte;
 import academia.excepcions.InscripcioNoOient;
-import academia.excepcions.MassaOficials;
+import academia.excepcions.MassaOficialsCurs;
+import academia.excepcions.MassaOficialsProjecte;
 import academia.excepcions.OficialOient;
 import academia.excepcions.PocsOients;
 
@@ -22,7 +23,7 @@ abstract public class EstatInscripcio
     }
     
     public void ferOficial(Inscripcio i, Persona persona, Projecte nouProj)
-            throws InscripcioNoOient, PocsOients, OficialOient, MassaOficials
+            throws InscripcioNoOient, PocsOients, OficialOient, MassaOficialsCurs, MassaOficialsProjecte
     {
         throw new InscripcioNoOient();
     }

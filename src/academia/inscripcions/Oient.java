@@ -3,7 +3,8 @@ package academia.inscripcions;
 import academia.Inscripcio;
 import academia.Persona;
 import academia.Projecte;
-import academia.excepcions.MassaOficials;
+import academia.excepcions.MassaOficialsCurs;
+import academia.excepcions.MassaOficialsProjecte;
 import academia.excepcions.OficialOient;
 import academia.excepcions.PocsOients;
 
@@ -23,7 +24,7 @@ public class Oient extends EstatInscripcio
     
     @Override
     public void ferOficial(Inscripcio inscripcio, Persona persona, Projecte nouProj)
-            throws PocsOients, OficialOient, MassaOficials
+            throws PocsOients, OficialOient, MassaOficialsCurs, MassaOficialsProjecte
     {
         projecte.eliminarOient(this, persona);
         

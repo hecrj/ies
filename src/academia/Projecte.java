@@ -1,6 +1,6 @@
 package academia;
 
-import academia.excepcions.MassaOficials;
+import academia.excepcions.MassaOficialsProjecte;
 import academia.excepcions.PocsOients;
 import academia.inscripcions.Oficial;
 import academia.inscripcions.Oient;
@@ -44,10 +44,10 @@ public class Projecte
             eliminarParticipant(persona);
     }
     
-    public void afegirOficial(Oficial oficial) throws MassaOficials
+    public void afegirOficial(Oficial oficial) throws MassaOficialsProjecte
     {
         if(oficials.size() >= 3)
-            throw new MassaOficials();
+            throw new MassaOficialsProjecte();
         
         oficials.add(oficial);
     }
