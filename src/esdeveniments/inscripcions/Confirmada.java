@@ -1,5 +1,7 @@
 package esdeveniments.inscripcions;
 
+import esdeveniments.Inscripcio;
+
 /**
  *
  * @author hector
@@ -7,6 +9,12 @@ package esdeveniments.inscripcions;
 public class Confirmada extends EstatInscripcio
 {
     public boolean acompanyat;
+    
+    public Confirmada(Inscripcio inscripcio, boolean acompanyat)
+    {
+        super(inscripcio);
+        this.acompanyat = acompanyat;
+    }
     
     @Override
     public float getPuntuacio()

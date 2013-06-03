@@ -18,4 +18,14 @@ public class Esdeveniment
     {
         return organitzador.getNom();
     }
+    
+    public boolean esPle()
+    {
+        return aforament == confirmats;
+    }
+    
+    public void incrementarConfirmats()
+    {
+        confirmats++;
+    }
 }

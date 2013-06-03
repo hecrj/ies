@@ -1,5 +1,7 @@
 package esdeveniments.inscripcions;
 
+import esdeveniments.Inscripcio;
+
 /**
  *
  * @author hector
@@ -7,6 +9,13 @@ package esdeveniments.inscripcions;
 public class Cancelada extends EstatInscripcio
 {
     private String motiu;
+    
+    public Cancelada(Inscripcio inscripcio, String motiu)
+    {
+        super(inscripcio);
+        
+        this.motiu = motiu;
+    }
     
     @Override
     public float getPuntuacio()

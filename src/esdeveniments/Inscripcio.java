@@ -1,5 +1,7 @@
 package esdeveniments;
 
+import esdeveniments.excepcions.HiHaOverbooking;
+import esdeveniments.excepcions.InscripcioNoPrevista;
 import esdeveniments.inscripcions.EstatInscripcio;
 import java.util.Date;
 
@@ -26,5 +28,20 @@ public class Inscripcio
     public float getPuntuacio()
     {
         return estat.getPuntuacio();
+    }
+    
+    public void confirmarAssistencia(boolean acompanyada) throws InscripcioNoPrevista, HiHaOverbooking
+    {
+        if(esdeveniment.esPle())
+            throw new HiHaOverbooking();
+        
+        estat.confirmarAssistencia(acompanyada);
+        
+        esdeveniment.incrementarConfirmats();
+    }
+    
+    public void modificarEstat(EstatInscripcio estat)
+    {
+        this.estat = estat;
     }
 }
