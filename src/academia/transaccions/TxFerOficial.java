@@ -5,10 +5,12 @@ import academia.Projecte;
 import academia.data.DataController;
 import academia.excepcions.CursPle;
 import academia.excepcions.InscripcioNoOient;
+import academia.excepcions.MassaOficials;
 import academia.excepcions.NoExisteixInscripcio;
 import academia.excepcions.NoExisteixProjecte;
 import academia.excepcions.OficialNoEnginyer;
 import academia.excepcions.OficialOient;
+import academia.excepcions.PocsOients;
 
 /**
  *
@@ -24,7 +26,7 @@ public class TxFerOficial
     
     public void executar()
             throws NoExisteixInscripcio, NoExisteixProjecte, CursPle, OficialOient, OficialNoEnginyer,
-            InscripcioNoOient
+            InscripcioNoOient, PocsOients, MassaOficials
     {
         Inscripcio inscripcio = dades.getInscripcio(dniP, nomCurs);
         Projecte projecte = dades.getProjecte(codiProj);

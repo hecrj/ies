@@ -29,7 +29,6 @@ public class Persona
     
     public void eliminarProjecte(Projecte p)
     {
-        p.eliminarParticipant(this);
         projectes.remove(p);
     }
 }

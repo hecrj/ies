@@ -2,6 +2,7 @@ package academia.inscripcions;
 
 import academia.Inscripcio;
 import academia.Projecte;
+import academia.excepcions.MassaOficials;
 
 /**
  *
@@ -9,12 +10,13 @@ import academia.Projecte;
  */
 public class Oficial extends EstatInscripcio
 {
-    private Projecte projecte;
-    
-    public Oficial(Inscripcio inscripcio, Projecte projecte)
+    public Oficial(Inscripcio inscripcio)
     {
         super(inscripcio);
-        this.projecte = projecte;
     }
     
+    public void setProjecte(Projecte projecte) throws MassaOficials
+    {
+        projecte.afegirOficial(this);
+    }
 }
