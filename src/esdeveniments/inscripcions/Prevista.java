@@ -29,5 +29,7 @@ public class Prevista extends EstatInscripcio
         inscripcio.modificarEstat(confirmada);
         
         organitzador.eliminarPrevista(this);
+        
+        // GARBAGE COLLECTOR, DESTROY ME PLEASE!
     }
 }

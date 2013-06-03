@@ -12,6 +12,7 @@ public class Esdeveniment
     private Date data;
     private int aforament;
     private int confirmats;
+    
     private Organitzador organitzador;
     
     public String getNomOrganitzador()
