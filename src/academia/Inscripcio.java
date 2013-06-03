@@ -24,8 +24,8 @@ public class Inscripcio
     private EstatInscripcio estat;
     
     public void ferOficial(Projecte projecte)
-            throws CursPle, OficialOient, OficialNoEnginyer, InscripcioNoOient, PocsOients, MassaOficialsCurs,
-            MassaOficialsProjecte
+            throws CursPle, OficialOient, OficialNoEnginyer, InscripcioNoOient, PocsOients,
+            MassaOficialsProjecte, MassaOficialsCurs
     {
         if(!persona.estaQualificada(projecte))
             throw new OficialNoEnginyer();
