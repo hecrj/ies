@@ -30,7 +30,11 @@ public class Inscripcio
         if(!persona.estaQualificada(projecte))
             throw new OficialNoEnginyer();
         
-        estat.ferOficial(this, persona, projecte);
+        estat.ferOficial(this, projecte);
+        
+        if(persona.esParticipant(projecte))
+            throw new OficialOient();
+        
         curs.incrementarOficials();
     }
     
@@ -42,5 +46,10 @@ public class Inscripcio
     public boolean tePersona(Persona persona)
     {
         return this.persona.equals(persona);
+    }
+    
+    public Persona getPersona()
+    {
+        return persona;
     }
 }

@@ -22,7 +22,7 @@ abstract public class EstatInscripcio
         this.inscripcio = inscripcio;
     }
     
-    public void ferOficial(Inscripcio i, Persona persona, Projecte nouProj)
+    public void ferOficial(Inscripcio i, Projecte nouProj)
             throws InscripcioNoOient, PocsOients, OficialOient, MassaOficialsCurs, MassaOficialsProjecte
     {
         throw new InscripcioNoOient();
@@ -31,5 +31,10 @@ abstract public class EstatInscripcio
     public boolean tePersona(Persona persona)
     {
         return inscripcio.tePersona(persona);
+    }
+    
+    public Persona getPersona()
+    {
+        return inscripcio.getPersona();
     }
 }

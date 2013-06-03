@@ -33,12 +33,14 @@ public class Projecte
         return false;
     }
     
-    public void eliminarOient(Oient oient, Persona persona) throws PocsOients
+    public void eliminarOient(Oient oient) throws PocsOients
     {
         if(oients.size() <= 3)
             throw new PocsOients();
         
         oients.remove(oient);
+        
+        Persona persona = oient.getPersona();
         
         if(!esOient(persona))
             eliminarParticipant(persona);

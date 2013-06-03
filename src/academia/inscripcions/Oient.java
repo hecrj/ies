@@ -1,7 +1,6 @@
 package academia.inscripcions;
 
 import academia.Inscripcio;
-import academia.Persona;
 import academia.Projecte;
 import academia.excepcions.MassaOficialsProjecte;
 import academia.excepcions.OficialOient;
@@ -22,13 +21,10 @@ public class Oient extends EstatInscripcio
     }
     
     @Override
-    public void ferOficial(Inscripcio inscripcio, Persona persona, Projecte nouProj)
+    public void ferOficial(Inscripcio inscripcio, Projecte nouProj)
             throws PocsOients, OficialOient, MassaOficialsProjecte
     {
-        projecte.eliminarOient(this, persona);
-        
-        if(persona.esParticipant(nouProj))
-            throw new OficialOient();
+        projecte.eliminarOient(this);
         
         Oficial oficial = new Oficial(inscripcio);
         oficial.setProjecte(nouProj);
